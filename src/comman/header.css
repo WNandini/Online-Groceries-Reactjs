@@ -1,0 +1,89 @@
+/* Header Style Start */
+.headerMainDiv{
+    padding: 15px 0px 15px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #807b82; 
+}
+.logo{
+    height: 50px;
+}
+.logo img{
+    height: 100%;
+}
+.searchAlignment{
+    display: flex;
+    justify-content: center;
+}
+.searchField div {
+    border-radius: 35px;
+}
+.searchField input{
+    height: 0px;
+    font-size: 18px;
+    padding: 20px;
+    width: 300px;
+}
+.searchIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100% !important;
+    border-radius: 23px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.headerIconDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.accountMainDiv{
+    display: flex;
+}
+.accountIconMain svg{
+    height: 45px;
+    width: 45px;
+    padding-right: 10px;
+}
+.registerText{
+    display: flex;
+}
+.registerText p{
+    font-size: 15px;
+}
+.accountText h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #f4ab2d;
+}
+.badgeColor{
+    background-color: #f4ab2d;
+    color: #fff;
+}
+/* For Typical Mobile Devices */
+@media only screen and (min-width: 320px) and (max-width: 756px) {
+    .headerMainDiv{
+        padding: 15px 0px 15px 0;
+        display: flex;
+        align-items: center;
+        border-bottom: none; 
+    }
+    .searchAlignment{
+        display: none;
+    }
+    .accountText{
+        display: none;
+    }
+    .accountIconMain svg{
+        height: 30px;
+        width: 30px;
+        padding-right: 0px;
+    }
+    .headerIconDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    }
+/* Header Style End */
