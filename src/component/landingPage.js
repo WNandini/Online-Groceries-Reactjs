@@ -116,6 +116,12 @@ const Landingpage = () => {
                     <Typography variant="h3">Shop By Category</Typography>
                 </Box>
                 <Box className="imageContainerCarousal">
+                    {objectCollection.CarousalImages.map((id,item) => {
+                        <Box key={id} className="imageContainer">
+                        <img src={item.images} alt='cat5'/>
+                        <Box className="blackLayer"/>
+                    </Box> 
+                    })}
                     <Box className="imageContainer">
                         <img src='assets/images/cat5.jpg' alt='cat5'/>
                         <Box className="blackLayer"/>

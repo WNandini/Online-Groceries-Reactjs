@@ -17,6 +17,41 @@ const SliderImages = [
     }
 ];
 
+const CarousalImages = [
+  {
+    id: 1,
+    images: "assets/images/cat1.jpg"
+  },
+  {
+    id: 2,
+    images: "assets/images/cat2.jpg"
+  },
+  {
+    id: 3,
+    images: "assets/images/cat3.jpg"
+  },
+  {
+    id: 4,
+    images: "assets/images/cat4.jpg"
+  },
+  {
+    id: 5,
+    images: "assets/images/cat5.jpg"
+  },
+  {
+    id: 6,
+    images: "assets/images/cat6.jpg"
+  },
+  {
+    id: 7,
+    images: "assets/images/cat7.jpg"
+  },
+  {
+    id: 8,
+    images: "assets/images/cat8.jpg"
+  }
+]
 export default{
-  SliderImages
+  SliderImages,
+  CarousalImages
 }

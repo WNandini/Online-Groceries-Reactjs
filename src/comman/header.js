@@ -11,6 +11,7 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
+import {Link} from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
@@ -46,9 +47,9 @@ const Header = () => {
                             <Box className="accountText">
                                 <Typography variant="h4">Account</Typography>
                                 <Box className="registerText"> 
-                                    <Typography>Register</Typography>
+                                    <Typography><Link to="/register">Register</Link></Typography>
                                     <Divider orientation="vertical" flexItem style={{margin: '5px'}}/>
-                                    <Typography>Login</Typography>
+                                    <Typography><Link to="/login">Login</Link></Typography>
                                 </Box>
                             </Box>
                         </Box>

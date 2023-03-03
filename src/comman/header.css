@@ -52,6 +52,10 @@
 .registerText p{
     font-size: 15px;
 }
+.registerText p a{
+    color: #000;
+    text-decoration: none;
+}
 .accountText h4{
     font-size: 20px;
     font-weight: 600;
