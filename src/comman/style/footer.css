@@ -12,6 +12,9 @@
     border-radius: 50%;
     margin: 15px;
 }
+.addressDiv{
+    padding: 40px 70px;
+}
 .logoFooter{
     padding: 20px;
 } 
@@ -56,8 +59,26 @@
     padding-left: 10px;
     line-height: 30px;
 }
-.addressDiv{
-    padding: 40px 70px;
+.copyRightMainDiv{
+    padding: 40px 108px;
+    background-color: #f4ab2d;
+}
+.copyRightDiv h6{
+    text-align: left;
+    font-size: 17px;
+    color: #fff;
+}
+.socialMediaIcon{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 70px;
+}
+.socialMediaIcon svg{
+    padding: '10px';
+}
+.cardIcon{
+    display: flex;
+    justify-content: center;
 }
 @media only screen and (min-width: 320px) and (max-width: 1191px) { 
     .iconMainBox{
@@ -72,5 +93,15 @@
     }
     .addressDiv{
         padding: 0px;
+    }
+    .copyRightMainDiv {
+        padding: 25px 25px;
+        background-color: #f4ab2d;
+    }
+    .copyRightDiv{
+        margin-bottom: 15px;
+    }
+    .copyRightDiv h6{
+        text-align: center;
     }
 }

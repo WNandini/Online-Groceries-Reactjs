@@ -6,10 +6,18 @@ import LoopIcon from '@mui/icons-material/Loop';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 import '../style/footer.css';
 
 const Footer = () => {
     return(
+        <>
         <Container maxWidth="false" >
             <Grid container className="footerMainContainer">
                 <Grid item lg={3} xs={12} sm={6}>
@@ -65,6 +73,22 @@ const Footer = () => {
                 </Grid>
             </Grid>
         </Container>
+        <Grid container className="copyRightMainDiv">
+            <Grid item lg={6} xs={12}>
+                <Box className="copyRightDiv"><Typography variant="h6">Copyright @ 2023 spacingtech all rights reserved</Typography></Box>
+            </Grid>
+            <Grid item lg={6} xs={12}>
+                <Box className="socialMediaIcon">
+                    <WhatsAppIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/>
+                    <FacebookIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/>
+                    <TwitterIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/> 
+                    <InstagramIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/>
+                    <PinterestIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/>
+                    <YouTubeIcon style={{backgroundColor: "#fff", color: '#f4ab2d',padding: '5px', borderRadius: '50%', margin: '0px 10px'}}/> 
+                </Box>
+            </Grid>
+        </Grid>
+        </> 
     )
 }
 
