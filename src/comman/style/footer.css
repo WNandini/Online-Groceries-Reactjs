@@ -1,0 +1,76 @@
+.footerMainContainer>div{
+    border-bottom: 1px solid #1d1d1d57;
+    padding-bottom: 20px;
+}
+.iconMainBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    padding: 20px;
+    border-radius: 50%;
+    margin: 15px;
+}
+.logoFooter{
+    padding: 20px;
+} 
+.logoFooter img{
+    width: 115px;
+    margin-bottom: 10px;
+}
+.logoFooter p{
+    font-size: 17px;
+    line-height: 30px;
+}
+.addressMainDiv{
+    padding: 20px;
+    line-height: 30px;
+}
+.addressMainDiv>div{
+    display: inline-flex;    
+    align-items: center;
+}
+.addressMainDiv>div>p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #f4ab2d;
+}
+.addressMainDiv p{
+    padding: 10px;
+}
+.phoneMainDiv{
+    padding: 20px;
+    line-height: 30px;
+}
+.phoneMainDiv>div{
+    display: inline-flex;    
+    align-items: center;
+}
+.phoneMainDiv>div>p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #f4ab2d;
+}
+.phoneMainDiv p{
+    padding-left: 10px;
+    line-height: 30px;
+}
+.addressDiv{
+    padding: 40px 70px;
+}
+@media only screen and (min-width: 320px) and (max-width: 1191px) { 
+    .iconMainBox{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .icon {
+        padding: 10px;
+        border-radius: 50%;
+        margin: 15px;
+    }
+    .addressDiv{
+        padding: 0px;
+    }
+}

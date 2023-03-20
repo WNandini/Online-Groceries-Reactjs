@@ -3,7 +3,7 @@ import { Container, Box, Typography,Divider, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
-import './dropdown.css'
+import '../style/dropdown.css';
 
 const Dropdown = () => {
     return(

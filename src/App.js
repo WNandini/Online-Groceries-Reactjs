@@ -1,19 +1,27 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landingpage from "./component/landingPage";
-import Login from "./authentication/login";
-import Register from "./authentication/register";
+import Landingpage from "./landingPages/landingPage";
+import Login from "./authentication/component/login";
+import Register from "./authentication/component/register";
+import Header from "./comman/component/header";
+import Dropdown from "./comman/component/dropdown";
+import Footer from "./comman/component/footer";
 
 const App = () => {
   return(
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Landingpage/>}/>
-        <Route exact path='/login' element={<Login/>}/>
-        <Route exact path='/register' element={<Register/>}/>
-        {/* https://vegina-store.myshopify.com/ */}
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header/>
+        <Dropdown/>
+        <Routes>
+          <Route exact path='/' element={<Landingpage/>}/>
+          <Route exact path='/login' element={<Login/>}/>
+          <Route exact path='/register' element={<Register/>}/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
   )
 }
+
+{/* https://vegina-store.myshopify.com/ */}
+
 export default App;

@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../comman/header";
-import Dropdown from "../comman/dropdown";
 import { useTheme } from '@mui/material/styles';
 import { Box, Icon, Button, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
@@ -30,8 +28,6 @@ const Landingpage = () => {
 
     return(
         <>
-            <Header/>
-            <Dropdown/>
             {/* Carousal Section Start*/}
             <Box>                
                 <AutoPlaySwipeableViews

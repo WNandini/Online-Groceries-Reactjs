@@ -12,7 +12,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'react-router-dom';
-import './header.css';
+import '../style/header.css';
 
 const Header = () => {
     return(

@@ -1,15 +1,11 @@
 import React from 'react';
-import Header from "../comman/header";
-import Dropdown from "../comman/dropdown";
 import { Grid, Box, Typography, TextField, Button} from '@mui/material';
 import { Link } from 'react-router-dom';
-import "./auth.css";
+import "../style/auth.css";
 
 const Register = () => {
    return(
       <>
-      <Header/>
-      <Dropdown/>
       <Grid container>
           <Grid item lg={6} xs={12} sm={6}>
               <Box
