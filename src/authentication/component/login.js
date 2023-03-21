@@ -1,9 +1,10 @@
 import React from 'react';
 import { Grid, Box, Typography, TextField, Button} from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "../style/auth.css";
 
 const Login = () => {
+    const navigate = useNavigate()
     return(
         <>
         <Grid container>
@@ -48,7 +49,7 @@ const Login = () => {
                         <Typography>Don't have an account?</Typography>
                     </Box>
                     <Box className='lightBtn'>
-                        <Button variant="contained">Create account</Button>
+                        <Button variant="contained" onClick={() => {navigate('/register')}}>Create account</Button>
                     </Box>
                     <Box className="termsCondition">
                         <Typography variant='h5'>Terms & conditions*</Typography>

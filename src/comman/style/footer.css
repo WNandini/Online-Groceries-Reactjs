@@ -60,7 +60,7 @@
     line-height: 30px;
 }
 .copyRightMainDiv{
-    padding: 40px 108px;
+    padding: 20px 108px;
     background-color: #f4ab2d;
 }
 .copyRightDiv h6{
@@ -71,7 +71,7 @@
 .socialMediaIcon{
     display: flex;
     justify-content: space-evenly;
-    padding: 0px 70px;
+    padding: 0px 140px;
 }
 .socialMediaIcon svg{
     padding: '10px';
