@@ -6,6 +6,7 @@ import Register from "./authentication/component/register";
 import Header from "./comman/component/header";
 import Dropdown from "./comman/component/dropdown";
 import Footer from "./comman/component/footer";
+import Map from "./comman/component/map";
 
 const App = () => {
   return(
@@ -16,6 +17,7 @@ const App = () => {
           <Route exact path='/' element={<Landingpage/>}/>
           <Route exact path='/login' element={<Login/>}/>
           <Route exact path='/register' element={<Register/>}/>
+          <Route exact path='/map' element={<Map/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

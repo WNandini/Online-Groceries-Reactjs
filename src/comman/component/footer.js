@@ -13,9 +13,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import { useNavigate } from 'react-router-dom';
 import '../style/footer.css';
 
 const Footer = () => {
+    const navigate = useNavigate();
     return(
         <>
         <Container maxWidth="false" >
@@ -69,6 +71,7 @@ const Footer = () => {
                         </Box>
                         <Typography>(+800) 1234 5678 90</Typography>
                         <Typography>support@demo.com</Typography>
+                        <Typography onClick={()=>{navigate("/map")}} style={{color: 'rgb(244, 171, 45)',cursor: 'pointer'}}>Map</Typography>
                     </Box>
                 </Grid>
             </Grid>
