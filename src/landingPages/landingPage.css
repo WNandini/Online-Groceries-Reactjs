@@ -231,3 +231,23 @@
 }
 
 /* Shop By Category End */
+
+/* Timer deal Start*/
+.backgroundForDealSection{
+    background: url(../../public/assets/images/dealbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 450px;
+}
+.textDealSection p{
+    font-size: 25px;
+    color: #fff;
+}
+.textDealSection h5{
+    line-height: 8px;
+    font-size: 35px;
+    color: #fff;
+}
+/* Timer deal End*/

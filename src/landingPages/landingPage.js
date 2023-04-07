@@ -8,6 +8,7 @@ import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrow
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import './landingPage.css';
 import objectCollection from '../objectCollection.js';
+import Timer from "./timer";
 
 const Landingpage = () => {
     const theme = useTheme();
@@ -132,6 +133,7 @@ const Landingpage = () => {
                     </Box>
                 </Box>               
             </Box>
+            <Timer/>
             {/* Shop By Category End*/}
         </>
     )
