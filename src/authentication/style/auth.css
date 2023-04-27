@@ -27,11 +27,25 @@
     color: #f4ab2d;
     font-weight: 600;
 }
-.textField{
+.textFieldEmail{
     margin: 15px 0 15px 0;
 }
-.textField div{
+.textFieldEmail div{
     width: 100%;
+}
+.textFieldEmail h5{
+    line-height: 0;
+    color: #ff0000;
+}
+.textFieldPassword{
+    margin: 15px 0 15px 0;
+}
+.textFieldPassword div{
+    width: 100%;
+}
+.textFieldPassword h5{
+    line-height: 0;
+    color: #ff0000;
 }
 .forgotPasText{
     text-align: center;
@@ -41,6 +55,16 @@
     color: #f4ab2d;
     font-size: 15px;
     font-weight: 600; 
+}
+.note h4{
+    color: #f4ab2d;
+}
+.note span{
+    color: #000;
+    font-size: 13px;
+    line-height: 10px;
+    font-weight: 200;
+    font-style: italic;
 }
 .lightBtn button{
     margin: 15px 0px 15px 0px;

@@ -5,53 +5,62 @@ import "../style/auth.css";
 
 const Login = () => {
     const navigate = useNavigate();
-    const [email, setEmail] = useState("");
-    const [emailError, setEmailError] = useState("");
-    const [password, setPassword] = useState("");
-    const [passwordError, setPasswordError] = useState("");
-    
-    const handleValidation = (name, value) => {
-        if(name === 'email'){
-            if(value === ''){
-                setEmailError("Please enter email")
-            }else if(value !== ""){
-                if(value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
-                    setEmailError("")
-                }else{
-                    setEmailError("Please enter valid email")
-                }
-            }else{
-                setEmailError("")
-            }
-        }
-        if(name === 'password'){
-            if(value === ''){
-                setPasswordError('Please enter password')
-            }else if(value !== ''){
-                if(value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8}$/)){
-                    setPasswordError('')
-                }else{
-                    setPasswordError('Please enter valid password')
-                }
-            }else{
-                setPasswordError('')
-            }
-        }
+    const [inputValue, setInputValue] = useState({
+        email:"",
+        password:""
+    })
+    const [inputError, setInputError] = useState({
+        emailError: "",
+        passwordError: ""
+    })
+    console.log(inputValue,"input")
+    // const handleValidation = (name,value) => {
+    //     if(name==='email'){
+    //         if(email === ''){
+    //             setEmailError({
+    //                 [name]: value
+    //             })
+    //             ("Please enter email")
+    //         }
+    //         else if(email !== ""){
+    //             if(email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
+    //                 setEmailError("")
+    //             }else{
+    //                 setEmailError("Please enter valid email")
+    //             }
+    //         }else{
+    //             setEmailError("")
+    //         }
+    //     }
+    //     if(name==='password'){
+    //         if(password === ""){
+    //             setPasswordError("Please enter password")
+    //         }
+    //     }
+    // }
+    const handleValidation = () => {
+        console.log(inputError)
     }
+    const handleInput = (e) =>{
+      const {name, value} = e.target;
+      handleValidation()
+      setInputValue({
+        ...inputValue,
+        [name]:value
+    })
 
-    const handleEmail = (e) => {
-        const {name, value} = e.target;
-        console.log("name",name)
-        console.log("value",value)
-        handleValidation(name, value)
-        setEmail(value);
     }
+    // const handleEmail = (e) => {
+    //     const {name, value} = e.target;
+    //     handleValidation(name, value)
+    //     setEmail(value);
+    // }
 
-    const handlePassword = (e) => {
-        const {name, value} = e.target;
-        handleValidation(name, value)
-        setPassword(value);
-    }   
+    // const handlePassword = (e) => {
+    //     const {name, value} = e.target;
+    //     handleValidation(name, value);
+    //     setPassword(value);
+    // }   
     
     const handleSignIn = async () => {           
         const response = await fetch(`https://dummyjson.com/users`)
@@ -62,7 +71,7 @@ const Login = () => {
         
         let newArray = data.users.filter(function (el)
         {
-            return el.email === email && el.password === password
+            return el.email === inputValue.email && el.password === inputValue.password
         }
         )
         if(newArray.length === 1){
@@ -84,31 +93,33 @@ const Login = () => {
                         <Typography variant="h4">Login</Typography>
                         <Typography variant="h6">Please login below account detail</Typography>
                     </Box>
-                    <Box className="textFieldEmail">
+                    <Box className="textField">
                         <TextField
                         id="outlined-multiline-flexible"
-                        type="text"
                         label="Email"
+                        name="email"
                         multiline
                         maxRows={5}
-                        value={email}
-                        name="email"
-                        onChange={handleEmail}
+                        // value={email}
+                        value={inputValue.email}
+                        // onChange={handleEmail}
+                        onChange={handleInput}
                         />
-                        <h5>{emailError}</h5>
+                        {/* <h5>{emailError}</h5> */}
                     </Box>
-                    <Box className="textFieldPassword">
+                    <Box className="textField">
                         <TextField
                         id="outlined-password-input"
                         label="Password"
+                        name="password"
                         type="password"
                         autoComplete="current-password"
-                        value={password}
-                        name='password'
-                        onChange={handlePassword}
+                        // value={password}
+                        value={inputValue.password}
+                        // onChange={handlePassword}
+                        onChange={handleInput}
                         />
-                        <h5>{passwordError}</h5>
-                        
+                        {/* <h5>{passwordError}</h5> */}
                     </Box>
                     <Box className='darkBtn'>
                         <Button variant="contained" onClick={handleSignIn}>Sign In</Button>
