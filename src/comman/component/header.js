@@ -30,9 +30,11 @@ const Header = () => {
                             <OutlinedInput
                                 id="outlined-adornment-weight"
                                 placeholder="Search our store"
-                                endAdornment={<InputAdornment position="end">
-                                    <SearchIcon style={{backgroundColor: '#000',color: '#fff',}} className="searchIcon"/>
-                                </InputAdornment>}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <SearchIcon style={{backgroundColor: '#000',color: '#fff',}} className="searchIcon"/>
+                                    </InputAdornment>
+                                }
                                 aria-describedby="outlined-weight-helper-text"
                             />
                         </FormControl>

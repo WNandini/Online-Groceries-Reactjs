@@ -6,6 +6,7 @@ import './landingPage.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import objectCollection from '../objectCollection.js';
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -52,39 +53,47 @@ const Product = () => {
                 onChangeIndex={handleChangeIndex}
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                   <Grid container>
+                    <Grid container>
+                        {objectCollection.Product.map((item) => 
                         <Grid item xs={3}>
                             <Box className="productMainDiv">
-                                <img src="assets/images/cat3.jpg" alt=""/>
-                                <Box>
-                                    <FavoriteIcon/>
-                                    <ShoppingBagIcon/>
-                                    <RemoveRedEyeIcon/>
+                                <img src={item.images} alt=""/>
+                                <Box className="ProductDetails">
+                                    <h4>{item.name}</h4>
+                                    <h5>{item.price}</h5>
                                 </Box>
                             </Box>
-                        </Grid> 
-                        <Grid item xs={3}>
-                            <Box>
-                                <img src="assets/images/cat3.jpg" alt=""/>
-                            </Box>
-                        </Grid> 
-                        <Grid item xs={3}>
-                            <Box>
-                                <img src="assets/images/cat3.jpg" alt=""/>
-                            </Box>
-                        </Grid> 
-                        <Grid item xs={3}>
-                            <Box>
-                                <img src="assets/images/cat3.jpg" alt=""/>
-                            </Box>
-                        </Grid> 
-                   </Grid>
+                        </Grid>
+                        )}
+                    </Grid> 
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                   NEW PRODUCT
+                    <Grid container>
+                        {objectCollection.Product.map((item) => 
+                        <Grid item xs={3}>
+                            <Box className="productMainDiv">
+                                <img src={item.images} alt=""/>
+                                <Box className="ProductDetails">
+                                    <h4>{item.name}</h4>
+                                    <h5>{item.price}</h5>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        )}
+                    </Grid> 
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
-                    BESTSELLER
+                    <Grid container>
+                        {objectCollection.Product.map((item) => 
+                        <Grid item xs={3}>
+                            <Box className="productMainDiv">
+                                <img src={item.images} alt=""/>
+                                <h4>{item.name}</h4>
+                                <h5>{item.price}</h5>
+                            </Box>
+                        </Grid>
+                        )}
+                    </Grid> 
                 </TabPanel>
             </SwipeableViews>
         </>

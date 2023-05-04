@@ -27,6 +27,17 @@
     color: #f4ab2d;
     font-weight: 600;
 }
+.textField{
+    margin: 15px 0 15px 0;
+}
+.textField div{
+    width: 100%;
+}
+.textField h5{
+    line-height: 0;
+    color: #ff0000;
+    font-weight: 400;
+}
 .textFieldEmail{
     margin: 15px 0 15px 0;
 }
@@ -36,6 +47,7 @@
 .textFieldEmail h5{
     line-height: 0;
     color: #ff0000;
+    font-weight: 400;
 }
 .textFieldPassword{
     margin: 15px 0 15px 0;
@@ -46,6 +58,7 @@
 .textFieldPassword h5{
     line-height: 0;
     color: #ff0000;
+    font-weight: 400;
 }
 .forgotPasText{
     text-align: center;

@@ -7,9 +7,9 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import './landingPage.css';
-import objectCollection from '../objectCollection.js';
 import Timer from "./timer";
 import Product from "./products";
+import objectCollection from '../objectCollection.js';
 
 const Landingpage = () => {
     const theme = useTheme();
@@ -109,7 +109,7 @@ const Landingpage = () => {
             </Box>
             {/* Banner Section End */}
             {/* Shop By Category Start */}
-            <Box className="shopByCatMainBox">
+            {/* <Box className="shopByCatMainBox">
                 <Box className="shopByCategoryHead">
                     <Typography variant="h3">Shop By Category</Typography>
                 </Box>
@@ -133,9 +133,30 @@ const Landingpage = () => {
                         <Box className="blackLayer"/>
                     </Box>
                 </Box>               
-            </Box>
+            </Box> */}
             {/* <Timer/> */}
             <Product/>
+            {/* <Box className="ourProductsHead">
+                <Typography variant="h3">Our Products</Typography>
+            </Box> */}
+            {/* <Typography className="viewAllProduct">View All Product</Typography> */}
+            {/* <Grid container>
+            {objectCollection.Product.slice(0,4).map((item) => (
+                <Grid item xs={3} key={item.id}>
+                    <Box className="productMainDiv">
+                        <img src={item.images} alt=""/>
+                        <Box className="ProductDetails">
+                            <h4>{item.name}</h4>
+                            <h5>{item.price}</h5>
+                        </Box>
+                    </Box>
+                </Grid>
+            ))} */}
+                {/* {objectCollection.Product.map((item) => 
+                
+                )} */}
+
+            {/* </Grid>  */}
             {/* Shop By Category End*/}
         </>
     )

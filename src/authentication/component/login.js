@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Box, Typography, TextField, Button} from '@mui/material';
+import { Grid, Box, Typography, TextField, Button, InputAdornment} from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import "../style/auth.css";
 
@@ -28,7 +28,7 @@ const Login = () => {
             if(value === ''){
                 setPasswordError('Please enter password')
             }else if(value !== ''){
-                if(value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8}$/)){
+                if(value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10}$/)){
                     setPasswordError('')
                 }else{
                     setPasswordError('Please enter valid password')
@@ -41,8 +41,6 @@ const Login = () => {
 
     const handleEmail = (e) => {
         const {name, value} = e.target;
-        console.log("name",name)
-        console.log("value",value)
         handleValidation(name, value)
         setEmail(value);
     }
@@ -61,7 +59,9 @@ const Login = () => {
         console.log("Data",data);
         
         let newArray = data.users.filter(function (el)
-        {
+        {   
+            localStorage.setItem('Email',email)
+            localStorage.setItem('Password',password)
             return el.email === email && el.password === password
         }
         )
@@ -108,7 +108,6 @@ const Login = () => {
                         onChange={handlePassword}
                         />
                         <h5>{passwordError}</h5>
-                        
                     </Box>
                     <Box className='darkBtn'>
                         <Button variant="contained" onClick={handleSignIn}>Sign In</Button>

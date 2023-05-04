@@ -273,11 +273,21 @@
 .borderBottom>div>span{
     display: none;
 }
-.productMainDiv{
-    /* background-color: #eff5e7; */
+.viewAllProduct{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 35px;
+}
+.productMainDiv{
     padding: 15px;
+    box-shadow: 0 1px 10px 0 #7a767670;
+    border-radius: 5px;
+    margin: 35px;
+}
+.ProductDetails h4{
+    line-height: 0;
+}
+.ProductDetails h5{
+    line-height: 2;
 }
 /* Product Page End  */
